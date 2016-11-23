@@ -20,7 +20,7 @@ if [ ! -z "${workdir}" ] ; then
 fi
 
 command -v gulp >/dev/null 2>&1 || {
-    echo "===> gulp is no installed, installing now..."
+    echo "===> gulp is not installed, installing now..."
      npm install -g gulp
 
      if [ $? -ge 1 ]; then
@@ -35,4 +35,4 @@ debug_echo "is_debug: $is_debug"
 
 debug_echo "===> Running 'gulp $command $args'"
 
-gulp ${command} ${options} --allow-root
+gulp ${command} ${args}
